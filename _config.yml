@@ -1,0 +1,37 @@
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Mobictive" # the name of your site, e.g. ACME Corp.
+description: "We specialize in developing lightweight games for mobile devices. Our focus lies in gameplay and storytelling, delivering truly entertaining experiences to users."
+tagline: "Where imagination meets mobility !"
+slogan: "Where imagination meets mobility !"
+
+# Plugins ===
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Defaults ===
+collections:
+  games:
+    output: true
+
+defaults:
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: default
+      permalink: /:year:month:day-:title.html
+  - scope:
+      path: ''
+      type: games
+    values:
+      layout: game
+      permalink: /:title-game/
+      image: null
+      screens: null
+      links: null
+
+# Compressed ===
+sass:
+  style: compressed
