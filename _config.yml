@@ -1,4 +1,4 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://mobictive.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Mobictive" # the name of your site, e.g. ACME Corp.
 description: "We specialize in developing lightweight games for mobile devices. Our focus lies in gameplay and storytelling, delivering truly entertaining experiences to users."
