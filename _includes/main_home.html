@@ -1,0 +1,53 @@
+
+    <main id="main" class="site-main site-main-home clearfix">
+        <div class="container">
+            <div id="tabs" class="home-tabs clearfix">
+                <ul class="tabs-menu clearfix">
+                    <li>
+                        <a href="#games" class="active">
+                            <span>Games</span>
+                            <svg width="100%" height="100%" viewBox="0 0 217 8" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                                <path d="M1.5 7.00104C78.5 -0.5 89.9 0.599716 215.5 6.99972" stroke="#1E2856" stroke-width="4" stroke-linecap="round"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#apps">
+                            <span>Apps</span>
+                            <svg width="100%" height="100%" viewBox="0 0 217 8" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                                <path d="M1.5 7.00104C78.5 -0.5 89.9 0.599716 215.5 6.99972" stroke="#1E2856" stroke-width="4" stroke-linecap="round"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div id="games" class="clearfix tab-content show">
+                    {% assign games = site.games %}
+                    {% if games and games.size != 0 %}
+                    <ul class="tab-content-list">
+                        {% for item in games %}
+                        <li>
+                            <div class="item-icon">
+                                <a href="{{ item.url }}">
+                                    {% if item.image %}
+                                    <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+                                <p>{{ item.description }}</p>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <!-- #games  -->
+                <div id="apps" class="clearfix tab-content">
+                    <div class="not-found"><p><code>Coming soon ...</code></p></div>
+                </div>
+                <!-- #apps  -->
+            </div>
+        </div>
+    </main>
+    <!-- #main  -->

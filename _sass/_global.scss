@@ -1,0 +1,219 @@
+@import "_reset.scss";
+/*
+ *	# Global
+ *-------------------------------------------------------------------------*/
+html {
+	font-size: 16px;
+}
+
+body {
+	background-color: $background;
+}
+
+body, button, input, select, textarea {
+	color: $text;
+	font-family: sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1.725;
+	@include rem(font-size, 14);
+	@extend .body__font;
+}
+
+a {
+	color: $main;
+	text-decoration: none;
+	@include t(all 0.2s ease-in-out);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4;
+	@extend .heading__font;
+	color: $main;
+}
+
+h1 {
+	@include rem(font-size, 32);
+}
+
+h2 {
+	@include rem(font-size, 24);
+}
+
+h3 {
+	@include rem(font-size, 22);
+}
+
+h4 {
+	@include rem(font-size, 20);
+}
+
+h5 {
+	@include rem(font-size, 16);
+}
+
+h6 {
+	@include rem(font-size, 14);
+}
+
+table, th, td {
+	border: 1px solid $border;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	border-width: 1px 0 0 1px;
+	margin-bottom: 29px;
+	width: 100%;
+}
+
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+
+th, td {
+	border-width: 0 1px 1px 0;
+	padding: 6px;
+}
+
+del {
+	@include o(0.5);
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid $border;
+	height: 1px;
+	margin-bottom: 28px;
+}
+
+p, pre, dl, dd, blockquote, address, table, fieldset, form, .gallery, img.alignnone {
+	// @include rem(margin-bottom, 28);
+	margin-bottom: 28px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+p img.alignnone:last-child {
+	margin-bottom: 0;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+	background-color: $background;
+	color: $main;
+	display: inline-block;
+	padding: 8px 12px;
+	border: 0;
+	width: auto;
+	@include t(all 0.3s);
+	&:focus {
+		background-color: $background;
+		@include t(all 0.3s);
+	}
+}
+
+textarea {
+	width: 100%;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	background-color: $main;
+	color: $white;
+	display: inline-block;
+	padding: 8px 12px;
+	border: 0;
+	width: auto;
+	&:hover,
+	&:focus {
+		background-color: $accent;
+		color: $white;
+	}
+}
+
+select {
+	background-color: $white;
+	display: inline-block;
+	// @include rem(padding, 8, 12);
+	padding: 8px 12px;
+	border: 1px solid $border;
+	width: auto;
+}
+
+embed, iframe, img, object, video {
+	max-width: 100%;
+}
+
+[hidden], .hide {
+	display: none;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+blockquote.alignleft, img.alignleft {
+	margin: 12px 28px 12px 0;
+}
+
+blockquote.alignright, img.alignright {
+	margin: 12px 0 12px 28px;
+}
+
+.wp-caption.alignright {
+	margin: 12px 0 12px 18px;
+}
+
+blockquote.aligncenter, img.aligncenter {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.required {
+	color: $accent;
+}
+
+.clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.row {
+	width: 100%;
+	@extend .clearfix;
+}
+
+.container {
+	margin: 0 auto;
+	position: relative;
+	width: 540px;
+	@extend .clearfix;
+}
+
+// Common Classes.
+.body__font {
+	font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.heading__font {
+	font-family: "Lexend", sans-serif;
+}
