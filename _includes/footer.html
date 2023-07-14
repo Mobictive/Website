@@ -1,0 +1,27 @@
+
+    <footer id="colophon" class="site-footer clearfix">
+        <div class="container">
+            {% assign footer_menu = site.data.menus.footer_menu %}
+            {% if footer_menu and footer_menu.size != 0 %}
+            <nav id="footer-menu" class="footer-menu clearfix">
+                <ul>
+                    {% for menu_item in footer_menu %}
+                    <li><a href="{{ menu_item.link }}">{{ menu_item.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            {% endif %}
+
+            <div id="footer-info" class="footer-info clearfix">
+                <p>&copy; {{ 'now' | date: "%Y" }} Mobictive. All Rights Reserved.</p>
+                <p>This website was made using <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> and <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.</p>
+            </div>
+        </div>
+        <!-- .container #colophon -->
+    </footer>
+    <!-- #colophon -->
+</div>
+<!-- #page -->
+{% include _enqueue/scripts.html %}
+</body>
+</html>

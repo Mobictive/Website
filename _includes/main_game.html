@@ -1,0 +1,62 @@
+
+    <main id="main" class="site-main main-game clearfix">
+        <div class="container">
+            <div class="game-item clearfix">
+                <div class="item-icon">
+                    {% if page.image %}
+                    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+                    {% endif %}
+                </div>
+                <!-- .item-icon -->
+                <div class="item-content">
+                    <h1 class="page-title">{{ page.title }}</h1>
+                    {% if page.description %}
+                    <p class="page-description">{{ page.description }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            <!-- .game-item -->
+            {% if page.screens %}
+            <div class="game-screens-wrap clearfix">
+                <div class="game-screens {{ page.screensclass }}">
+                    {% assign screens = page.screens %}
+                    {% for shot in screens %}
+                    <div class="screen-item">
+                        <img src="{{ shot | relative_url }}">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- .game-screens-wrap -->
+            {% endif %}
+            {% if page.content %}
+            <div class="game-content content-area clearfix">
+                {{ page.content }}
+            </div>
+            <!-- .game-content -->
+            {% endif %}
+            <div class="game-download clearfix">
+                <div class="download-item">
+                    {% if page.appstore %}
+                    <a href="{{ page.appstore | absolute_url }}" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ '/assets/images/appstore.svg' | relative_url }}">
+                    </a>
+                    {% else %}
+                    <img src="{{ '/assets/images/appstore.svg' | relative_url }}">
+                    {% endif %}
+                </div>
+                <div class="download-item">
+                    {% if page.googleplay %}
+                    <a href="{{ page.googleplay | absolute_url }}" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ '/assets/images/googleplay.svg' | relative_url }}">
+                    </a>
+                    {% else %}
+                    <img src="{{ '/assets/images/googleplay.svg' | relative_url }}">
+                    {% endif %}
+                </div>
+            </div>
+            <!-- .game-download -->
+        </div>
+        <!-- .container #main -->
+    </main>
+    <!-- #main -->

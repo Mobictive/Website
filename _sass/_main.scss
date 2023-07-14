@@ -1,0 +1,114 @@
+@import "_nav.scss";
+/*
+ *	# Main
+ *-------------------------------------------------------------------------*/
+ #main {
+    min-height: calc(100vh - 378px);
+    padding: 45px 0;
+}
+
+#error-404 {
+    h3 {
+        letter-spacing: -1px;
+        margin-bottom: 0;
+        span {
+            color: #999;
+            font-weight: normal;
+        }
+    }
+    code {
+        display: block;
+        margin: 12px 0 24px;
+    }
+    a {
+        color: $secondary;
+        font-weight: 700;
+        &:hover {
+            color: $accent;
+        }
+    }
+}
+
+#tabs {
+    .tabs-menu {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        @extend .heading__font;
+        li {
+            margin-right: 30px;
+            a {
+                position: relative;
+                color: #999;
+                svg {
+                    position: absolute;
+                    height: 0.25rem;
+                    left: -0.125rem;
+                    right: -0.125rem;
+                    bottom: -0.25rem;
+                    width: calc(100% + 0.25rem);
+                    stroke-dasharray: 220;
+                    stroke-dashoffset: 220;
+                    transition: stroke-dashoffset 300ms ease 0s;
+                }
+                &:hover {
+                    color: $secondary;
+                    svg {
+                        stroke-dashoffset: 0;
+                    }
+                }
+            }
+            .active {
+                color: $secondary;
+                svg {
+                    stroke-dashoffset: 0;
+                    path {
+                        stroke: #ff6600 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tabs-content {
+    padding: 45px 0;
+}
+
+.tabs-content-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        margin-bottom: 45px;
+        display: flex;
+    }
+}
+
+.item-icon {
+    margin-right: 20px;
+    width: 100px;
+    float: left;
+    img {
+        width: 100px;
+        height: auto;
+        border-radius: 16px;
+    }
+}
+
+.item-content {
+    width: calc(100% - 120px);
+    float: left;
+    h1, h3 {
+        font-size: 16px;
+        margin-bottom: 6px;
+        a {
+            &:hover {
+                color: $accent;
+                text-decoration: underline;
+            }
+        }
+    }
+}

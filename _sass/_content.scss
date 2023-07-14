@@ -1,0 +1,113 @@
+@import "_main.scss";
+/*
+ *	# Content
+ *-------------------------------------------------------------------------*/
+ .content-area {
+    margin-bottom: 30px;
+    h1,h2,h3,h4,h5,h6 {
+        margin-bottom: 6px;
+        & ~ ul {
+            margin-top: 12px;
+        }
+    }
+    ul, ol {
+        margin-left: 36px;
+        margin-bottom: 28px;
+        li {
+            margin-bottom: 8px;
+        }
+    }
+    ul {
+        list-style: disc;
+    }
+    ol {
+        list-style: decimal;
+    }
+    strong, b {
+        color: $main;
+    }
+    a {
+        color: $accent;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    h2:first-child {
+        margin-bottom: 28px;
+    }
+}
+
+.game-item {
+    display: flex;
+}
+
+.game-screens-wrap {
+    margin-top: 30px;
+    width: 100vw;
+    max-width: 810px;
+    margin-left: -180px;
+}
+
+.game-screens {
+    position: relative;
+    button {
+        background: none;
+        width: 48px;
+        height: 48px;
+        text-align: center;
+        line-height: 48px;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        margin-top: -24px;
+        border-radius: 50%;
+        z-index: 99999;
+        img {
+            height: 32px;
+            width: auto;
+        }
+    }
+    .slick-prev {
+        left: -72px;
+    }
+    .slick-next {
+        right: -72px;
+    }
+    button.slick-disabled {
+        display: none;
+        opacity: 0;
+    }
+}
+
+.game-content {
+    margin-top: 30px;
+    padding: 24px;
+    background-color: #f2f2f2;
+    ul:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.game-download {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    .download-item {
+        margin: 0 10px;
+        img {
+            @include o(0.3);
+        }
+        a {
+            @include t(all 0.3s);
+            img {
+                @include o(1);
+            }
+            &:hover {
+                @include o(0.8);
+            }
+        }
+    }
+}
