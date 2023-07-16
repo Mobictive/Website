@@ -57,7 +57,7 @@
                         nextArrow: '<button type="button" class="slick-next"><img src="/assets/images/arrow-right.svg"></button>',
                         responsive: [
                             {
-                                breakpoint: 480,
+                                breakpoint: 468,
                                 settings: {
                                     slidesToShow: 1
                                 }
