@@ -2,3 +2,16 @@
 /*
  *	# Media Queries
  *-------------------------------------------------------------------------*/
+@media only screen and (max-width: 811px) {
+    .game-screens-wrap {
+        width: 100%;
+        max-width: 100vw;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+    .container {
+        width: 92%;
+    }
+}
